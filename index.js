@@ -14,20 +14,20 @@ inquirer
     }, {
         type: "list",
         message: "Enter Text Color:",
-        name: "textColor"
+        name: "textColor",
        choices: ["pink", "blue", "green"]
 
     }, {
         type: "list",
         message: "Enter Shape:",
-        name: "shaper"
+        name: "shape",
       choices: ["triangle", "square", "circle"]
 
 
     }, {
         type: "list",
         message: "Enter Shape Color:",
-        name: "shapeColor"
+        name: "shapeColor",
         choices: ["pink", "blue", "green"]
     }])
     .then(response => {
@@ -36,7 +36,7 @@ inquirer
             circle.setColor(response.textColor)
             circle.setText(response.text)
             circle.setShapeColor(response.shapeColor)
-            fs.writefiles("./examples/logo.svg", circle.render(), (err) => {
+            fs.writeFile("./examples/logo.svg", circle.render(), (err) => {
                 console.log("Generated logo.svg");
             })
         } else if (response.shape === "triangle") {
@@ -44,7 +44,7 @@ inquirer
             triangle.setColor(response.textColor)
             triangle.setText(response.text)
             triangle.setShapeColor(response.shapeColor)
-            fs.writefiles("./examples/logo.svg", triangle.render(), (err) => {
+            fs.writeFile("./examples/logo.svg", triangle.render(), (err) => {
                 console.log("Generated logo.svg");
             })
         } else if (response.shape === "square") {
@@ -52,7 +52,7 @@ inquirer
             square.setColor(response.textColor)
             square.setText(response.text)
             square.setShapeColor(response.shapeColor)
-            fs.writefiles("./examples/logo.svg", square.render(), (err) => {
+            fs.writeFile("./examples/logo.svg", square.render(), (err) => {
                 console.log("Generated logo.svg");
             })
         }

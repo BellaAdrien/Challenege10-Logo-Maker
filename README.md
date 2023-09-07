@@ -1,5 +1,5 @@
 # Challenege10-Logo-Maker
-# IAdrien-Portfolio Challenge-2
+
 
 ## Description
 - What was your motivation? To create a functional logo creator that is easy to use
